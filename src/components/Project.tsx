@@ -58,11 +58,11 @@ const projects = [
   {
     id: 3,
     title: "DSSYWLC-24",
-    description: "",
+    description: "Designed and developed a user-friendly IEEE conference website with Zod-validated registration (250+ paid users) and a teacher dashboard for managing and verifying entries with email confirmations via Resend.",
     technologies: [
-      { name: "Flutter", icon: Smartphone },
-      { name: "Dart", icon: Code2 },
-      { name: "Firebase", icon: Flame },
+      { name: "Next.js", icon: Globe },
+      { name: "MongoDb", icon: Database },
+      { name: "Vercel", icon: Globe },
     ],
     image: "/placeholder.svg?height=400&width=600",
     status: "Completed",
