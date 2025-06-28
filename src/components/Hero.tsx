@@ -1,59 +1,47 @@
-import React from "react";
-import {
-  User,
-  MapPin,
-  Mail,
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram,
-} from "lucide-react";
-import { CardSpotlight } from "./ui/card-spotligt";
+import type React from "react"
+import { Github, Linkedin, Instagram } from "lucide-react"
+import { CardSpotlight } from "@/components/ui/card-spotligt"
+import { ContainerTextFlip } from "./ui/container-text-flip"
 
 const Hero: React.FC = () => {
   return (
     <section className="relative z-10 min-h-screen flex items-center justify-center px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <div className="inline-block bg-[#00ff88] text-black px-4 py-2 rounded-full text-sm font-medium mb-6">
-            I design and develop!
+          <div className="inline-block bg-[#00ff88] text-black px-20 py-2 rounded-full text-lg font-medium mb-8">
+            <ContainerTextFlip words={[" I imagine", "I craft", "I learn", "I code", "I build", "I refine", "I elevate", "I GROW"]}
+            className="mb-2"
+            />
           </div>
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8">
-            Ananya Jain
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 animate-pulse-subtle">
+            <span className="bg-gradient-to-r from-white via-[#00ff88] to-white bg-clip-text text-transparent animate-gradient-flow">
+              Ananya Jain
+            </span>
           </h1>
         </div>
-
         <div className="grid md:grid-cols-3 gap-10 items-start">
           {/* About Me */}
           <div className="md:col-span-1">
             <h2 className="text-2xl font-bold text-white mb-4">About me</h2>
             <p className="text-gray-300 mb-4">
-              I am an Aspiring Software Engineer with a bachelor's degree in
-              computer science and currently pursuing a master's in computer
-              applications.
+              I am an Aspiring Software Engineer with a bachelor's degree in computer science and currently pursuing a
+              master's in computer applications.
             </p>
             <p className="text-gray-300 mb-6">
-              I thrive on solving complex problems and crafting innovative
-              solutions using cutting-edge technologies.I am passionate,
-              creative, a team player, and always eager to learn new skills and
-              take on new challenges. 🧠
+              I thrive on solving complex problems and crafting innovative solutions using cutting-edge technologies.I
+              am passionate, creative, a team player, and always eager to learn new skills and take on new challenges.
+              🧠
             </p>
             <p className="text-gray-300 mb-6">
-              ✨ I’m not just a developer — I’m a classical dancer, a girl who
-              plays piano, and an entrepreneur. Always building, whether it's
-              code or a brand! 💃👜👩‍💻
+              ✨ I'm not just a developer — I'm a classical dancer, a girl who plays piano, and an entrepreneur. Always
+              building, whether it's code or a brand! 💃👜👩‍💻
             </p>
-
             <div className="mb-6">
               <p className="text-gray-400 text-sm mb-2">FIND ME AT</p>
-              <a
-                href="mailto:ananya.work@gmail.com"
-                className="text-[#00ff88] hover:underline"
-              >
+              <a href="mailto:ananya.work@gmail.com" className="text-[#00ff88] hover:underline">
                 ananyajain2348@gmail.com
               </a>
             </div>
-
             <div className="flex space-x-4">
               <a
                 href="https://www.linkedin.com/in/ananyajain11/"
@@ -61,10 +49,7 @@ const Hero: React.FC = () => {
               >
                 <Linkedin size={20} />
               </a>
-              <a
-                href="https://github.com/jananya25"
-                className="text-gray-400 hover:text-[#00ff88] transition-colors"
-              >
+              <a href="https://github.com/jananya25" className="text-gray-400 hover:text-[#00ff88] transition-colors">
                 <Github size={20} />
               </a>
               <a
@@ -77,7 +62,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Profile Card */}
-          <CardSpotlight className="h-96 w-auto rounded-3xl justify-center">
+           <CardSpotlight className="h-100 w-auto rounded-3xl justify-center">
             <div className="flex flex-col items-center gap-8 relative">
               {/* Profile Picture */}
               <div className="relative flex gap-4 items-center justify-between">
@@ -90,7 +75,7 @@ const Hero: React.FC = () => {
                 />
               </div>
               {/* Tech Stack */}
-              <div className="flex flex-col items-center justify-center  gap-3 relative z-20 bg-red-900">
+              <div className="flex flex-col items-center justify-center  gap-3 relative z-20 ">
                 <div className="flex flex-wrap items-center gap-3">
                   <SkillItem title="React" img="/r.png" />
                   <img src="/r.png" alt="React" width={80} height={30} />
@@ -107,7 +92,7 @@ const Hero: React.FC = () => {
           </CardSpotlight>
 
           {/* Experiments */}
-          <div className="md:col-span-1">
+           <div className="md:col-span-1">
             <div className="mb-6">
               <div className="flex items-center mb-4">
                 <span className="text-[#00ff88] text-sm mr-2">
@@ -150,19 +135,16 @@ const Hero: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
 
-const SkillItem: React.FC<{ img: string; title: string }> = ({
-  img,
-  title,
-}) => {
+const SkillItem: React.FC<{ img: string; title: string }> = ({ img, title }) => {
   return (
     <div className="flex items-center gap-3 px-2 py-1 bg-gradient-to-br from-neutral-900 via-neutral-300 to-neutral-900 rounded-md shadow-sm hover:scale-105 transition-transform duration-300">
-      <img src={img} alt={title} className="w-8 h-8" />
+      <img src={img || "/placeholder.svg"} alt={title} className="w-8 h-8" />
       <p className="text-gray-900 font-medium">{title}</p>
     </div>
-  );
-};
+  )
+}
