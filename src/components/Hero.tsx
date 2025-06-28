@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
           </h1>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 items-start">
+        <div className="grid md:grid-cols-3 gap-10 items-start">
           {/* About Me */}
           <div className="md:col-span-1">
             <h2 className="text-2xl font-bold text-white mb-4">About me</h2>
@@ -77,64 +77,30 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Profile Card */}
-
-          <CardSpotlight className="h-96 w-auto flex flex-row items-center rounded-3xl justify-center gap-8 p-6">
-            <div className="flex flex-row items-center gap-8 -translate-y-6 p-6 relative -mt-20">
+          <CardSpotlight className="h-96 w-auto rounded-3xl justify-center">
+            <div className="flex flex-col items-center gap-8 relative">
               {/* Profile Picture */}
-              <div className="relative -mt-20">
+              <div className="relative flex gap-4 items-center justify-between">
                 <img
                   src="/ana.jpeg"
                   alt="Ananya Jain"
-                  width={170}
-                  height={170}
+                  width={100}
+                  height={100}
                   className="rounded-full border-2 border-black shadow-lg"
                 />
               </div>
-
-              {/* Name and Tech Stack */}
-              <div className="flex flex-col items-start  gap-3 relative z-20">
-                {/* Name */}
-                <p className="text-2xl font-bold text-white">Ananya Jain</p>
-                
-
-                {/* Tech Stack */}
+              {/* Tech Stack */}
+              <div className="flex flex-col items-center justify-center  gap-3 relative z-20 bg-red-900">
                 <div className="flex flex-wrap items-center gap-3">
-                  <img
-                    src="/tech/react.png"
-                    alt="React"
-                    width={30}
-                    height={30}
-                  />
-                  <img
-                    src="/tech/nextjs.png"
-                    alt="Next.js"
-                    width={30}
-                    height={30}
-                  />
-                  <img
-                    src="/tech/nodejs.png"
-                    alt="Node.js"
-                    width={30}
-                    height={30}
-                  />
-                  <img
-                    src="/tech/typescript.png"
-                    alt="TypeScript"
-                    width={30}
-                    height={30}
-                  />
-                  <img
-                    src="/tech/tailwind.png"
-                    alt="Tailwind CSS"
-                    width={30}
-                    height={30}
-                  />
-                  <img
-                    src="/tech/mongodb.png"
-                    alt="MongoDB"
-                    width={30}
-                    height={30}
-                  />
+                  <SkillItem title="React" img="/r.png" />
+                  <img src="/r.png" alt="React" width={80} height={30} />
+                  <img src="/r.png" alt="Next.js" width={80} height={30} />
+                  <img src="r.png" alt="Node.js" width={80} height={30} />
+                  <img src="r.png" alt="TypeScript" width={80} height={30} />
+                  <img src="r.png" alt="Tailwind CSS" width={80} height={30} />
+                  <img src="r.png" alt="MongoDB" width={80} height={30} />
+                  <img src="r.png" alt="MongoDB" width={80} height={30} />
+                  <img src="r.png" alt="MongoDB" width={80} height={30} />
                 </div>
               </div>
             </div>
@@ -188,3 +154,15 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
+const SkillItem: React.FC<{ img: string; title: string }> = ({
+  img,
+  title,
+}) => {
+  return (
+    <div className="flex items-center gap-3 px-2 py-1 bg-gradient-to-br from-neutral-900 via-neutral-300 to-neutral-900 rounded-md shadow-sm hover:scale-105 transition-transform duration-300">
+      <img src={img} alt={title} className="w-8 h-8" />
+      <p className="text-gray-900 font-medium">{title}</p>
+    </div>
+  );
+};
