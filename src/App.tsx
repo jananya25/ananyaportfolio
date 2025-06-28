@@ -2,6 +2,8 @@ import React from "react";
 import Hero from "./components/Hero";
 import GridBackground from "./components/GridBackground";
 import Footer from "./components/Footer";
+import ProjectsShowcase from "./components/Project";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       
       <main>
         <Hero />
+        <Experience/>
+        <ProjectsShowcase/>
         <Footer/>
       </main>
     </div>
