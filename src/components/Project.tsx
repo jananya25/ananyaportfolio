@@ -110,7 +110,7 @@ export default function ProjectsShowcase() {
     <div className="min-h-screen bg-black text-white p-6 overflow-hidden">
       {/* Animated background particles */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        {[...Array(70)].map((_, i) => (
+        {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-green-400/30 rounded-full"
