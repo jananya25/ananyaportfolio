@@ -78,56 +78,65 @@ const Hero: React.FC = () => {
 
           {/* Profile Card */}
 
-          <CardSpotlight className="h-96 w-96 flex flex-col items-center rounded-3xl justify-center gap-4 p-4">
-            {/* Profile Picture */}
-            <div className="relative z-20">
-              <img
-                src="/ana.jpeg" 
-                alt="Ananya Jain"
-                width={130}
-                height={130}
-                className="rounded-full border-2 border-black shadow-lg"
-              />
-            </div>
+          <CardSpotlight className="h-96 w-auto flex flex-row items-center rounded-3xl justify-center gap-8 p-6">
+            <div className="flex flex-row items-center gap-8 -translate-y-6 p-6 relative -mt-20">
+              {/* Profile Picture */}
+              <div className="relative -mt-20">
+                <img
+                  src="/ana.jpeg"
+                  alt="Ananya Jain"
+                  width={170}
+                  height={170}
+                  className="rounded-full border-2 border-black shadow-lg"
+                />
+              </div>
 
-            {/* Name */}
-            <p className="text-xl font-bold relative z-20 text-white">
-              Ananya Jain
-            </p>
+              {/* Name and Tech Stack */}
+              <div className="flex flex-col items-start  gap-3 relative z-20">
+                {/* Name */}
+                <p className="text-2xl font-bold text-white">Ananya Jain</p>
+                
 
-            {/* Tech Stack */}
-            <div className="flex flex-wrap justify-center items-center gap-3 relative z-20 mt-2">
-              <img src="/tech/react.png" alt="React" width={30} height={30} />
-              <img
-                src="/tech/nextjs.png"
-                alt="Next.js"
-                width={30}
-                height={30}
-              />
-              <img
-                src="/tech/nodejs.png"
-                alt="Node.js"
-                width={30}
-                height={30}
-              />
-              <img
-                src="/tech/typescript.png"
-                alt="TypeScript"
-                width={30}
-                height={30}
-              />
-              <img
-                src="/tech/tailwind.png"
-                alt="Tailwind CSS"
-                width={30}
-                height={30}
-              />
-              <img
-                src="/tech/mongodb.png"
-                alt="MongoDB"
-                width={30}
-                height={30}
-              />
+                {/* Tech Stack */}
+                <div className="flex flex-wrap items-center gap-3">
+                  <img
+                    src="/tech/react.png"
+                    alt="React"
+                    width={30}
+                    height={30}
+                  />
+                  <img
+                    src="/tech/nextjs.png"
+                    alt="Next.js"
+                    width={30}
+                    height={30}
+                  />
+                  <img
+                    src="/tech/nodejs.png"
+                    alt="Node.js"
+                    width={30}
+                    height={30}
+                  />
+                  <img
+                    src="/tech/typescript.png"
+                    alt="TypeScript"
+                    width={30}
+                    height={30}
+                  />
+                  <img
+                    src="/tech/tailwind.png"
+                    alt="Tailwind CSS"
+                    width={30}
+                    height={30}
+                  />
+                  <img
+                    src="/tech/mongodb.png"
+                    alt="MongoDB"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+              </div>
             </div>
           </CardSpotlight>
 
@@ -142,24 +151,31 @@ const Hero: React.FC = () => {
 
               <div className="space-y-4">
                 <div className="bg-gray-800 rounded-lg p-4">
-                  <h3 className="text-white font-bold mb-2">IEEE Summer School 📚</h3>
+                  <h3 className="text-white font-bold mb-2">
+                    IEEE Summer School 📚
+                  </h3>
                   <p className="text-gray-400 text-sm">
-                    Built IEEE Summer School Website – 2025 with 200+ registrations, a landing page and an admin dashboard
-                    
+                    Built IEEE Summer School Website – 2025 with 200+
+                    registrations, a landing page and an admin dashboard
                   </p>
                   <div className="mt-2">
-                    <span className="text-[#00ff88] text-xs underline">Click to View</span>
+                    <span className="text-[#00ff88] text-xs underline">
+                      Click to View
+                    </span>
                   </div>
                 </div>
 
                 <div className="bg-gray-800 rounded-lg p-4">
                   <h3 className="text-white font-bold mb-2">Investory ✅</h3>
                   <p className="text-gray-400 text-sm">
-                    Building a web app to teach users about investment using interactive tutorials. Used upstox
-API to fetch real-time stocks data.
+                    Building a web app to teach users about investment using
+                    interactive tutorials. Used upstox API to fetch real-time
+                    stocks data.
                   </p>
                   <div className="mt-2">
-                    <span className="text-[#00ff88] text-xs underline">Click to View</span>
+                    <span className="text-[#00ff88] text-xs underline">
+                      Click to View
+                    </span>
                   </div>
                 </div>
               </div>
