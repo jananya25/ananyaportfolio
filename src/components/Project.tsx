@@ -20,6 +20,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useState } from "react";
 
 const projects = [
   {
@@ -57,7 +58,7 @@ const projects = [
   {
     id: 3,
     title: "DSSYWLC-24",
-    description: "Easy to use expense manager app",
+    description: "",
     technologies: [
       { name: "Flutter", icon: Smartphone },
       { name: "Dart", icon: Code2 },
@@ -112,6 +113,28 @@ const headerVariants = {
   },
 }
 
+export default function ProjectsShowcase() {
+    const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+    return(
+        <div className="min-h-screen bg-black text-white p-6 overflow-hidden">
+            {/*Animated */}
+            <div className="fixed inset-0 overflow-hidden pointer-events-none">
 
 
+            </div>
+
+
+            
+        </div>
+    )
+
+};
+
+
+
+
+
+function ProjectsShowcase() {
+    throw new Error("Function not implemented.");
+}
 
