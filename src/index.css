@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 
+
+  
+
+
+
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -64,6 +71,14 @@
   .perspective-1000 {
     perspective: 1000px;
   }
+  .animate-pulse-subtle {
+    animation: pulseSubtle 3s ease-in-out infinite;
+  }
+
+  .animate-gradient-flow {
+    background-size: 200% 200%;
+    animation: gradientFlow 4s ease-in-out infinite;
+  }
 }
 
 * {
@@ -84,6 +99,26 @@ body {
     transform: translate(40px, 40px);
   }
 }
+
+  @keyframes pulseSubtle {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes gradientFlow {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
 
 html {
   scroll-behavior: smooth;
