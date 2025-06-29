@@ -1,5 +1,4 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (

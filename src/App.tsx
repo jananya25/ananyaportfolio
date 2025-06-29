@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "./components/Hero";
 import GridBackground from "./components/GridBackground";
 import Footer from "./components/Footer";

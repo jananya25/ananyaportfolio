@@ -14,10 +14,8 @@ import {
   Database,
   Flame,
   Folder,
-  Smartphone,
   Code2,
   Wind,
-  FileText,
   Server,
   Globe,
 } from "lucide-react";

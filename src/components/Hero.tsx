@@ -180,14 +180,4 @@ const Hero: React.FC = () => {
 
 export default Hero;
 
-const SkillItem: React.FC<{ img: string; title: string }> = ({
-  img,
-  title,
-}) => {
-  return (
-    <div className="flex items-center gap-3 px-2 py-1 bg-gradient-to-br from-neutral-900 via-neutral-300 to-neutral-900 rounded-md shadow-sm hover:scale-105 transition-transform duration-300">
-      <img src={img || "/placeholder.svg"} alt={title} className="w-8 h-8" />
-      <p className="text-gray-900 font-medium">{title}</p>
-    </div>
-  );
-};
+
