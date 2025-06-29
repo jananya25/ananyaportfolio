@@ -1,18 +1,37 @@
-"use client"
+"use client";
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowUpRight, Database, Flame, Folder, Smartphone, Code2, Wind, FileText, Server, Globe } from "lucide-react"
-import { motion } from "framer-motion"
-import { useState } from "react"
-import type { Variants } from "framer-motion"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  ArrowUpRight,
+  Database,
+  Flame,
+  Folder,
+  Smartphone,
+  Code2,
+  Wind,
+  FileText,
+  Server,
+  Globe,
+} from "lucide-react";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import type { Variants } from "framer-motion";
 
 const projects = [
   {
     id: 1,
     title: "IEEE Summer School BVICAM",
-    description: 'Developed a responsive registration portal for the IEEE Summer School BVICAM 2025, featuring a landing page, admin dashboard.',
+    path: "https://summer-school.bvicam.in/",
+    description:
+      "Developed a responsive registration portal for the IEEE Summer School BVICAM 2025, featuring a landing page, admin dashboard.",
     technologies: [
       { name: "Next.js", icon: Globe },
       { name: "TailwindCSS", icon: Wind },
@@ -28,37 +47,40 @@ const projects = [
   {
     id: 2,
     title: "Investory",
-    description: "Simulate real-time stock trading using virtual money, quizzes, levels, and a virtual trading system. Integrated authentication and Interactive levels.",
+    path: "https://investory-dusky.vercel.app/",
+    description:
+      "Simulate real-time stock trading using virtual money, quizzes, levels, and a virtual trading system. Integrated authentication and Interactive levels.",
     technologies: [
-      { name: "Next.js", icon:  Globe },
+      { name: "Next.js", icon: Globe },
       { name: "Node.js", icon: Code2 },
       { name: "PostgreSQL", icon: Database },
       { name: "AWS", icon: Server },
       { name: "Vercel", icon: Server },
       { name: "Socket.io", icon: Flame },
     ],
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/inves.jpg?height=400&width=600",
     status: "Completed",
     color: "from-green-500/20 to-teal-500/20",
   },
   {
     id: 3,
     title: "DSSYWLC -2024",
-    description: "Designed and developed a user-friendly website for an IEEE conference with over 250 paid sign-ups. Built a teacher dashboard for managing and verifying entries",
+    path: "https://ieee-bvicam-conference.vercel.app/",
+    description:
+      "Designed and developed a user-friendly website for an IEEE conference with over 250 paid sign-ups. Built a teacher dashboard for managing and verifying entries",
     technologies: [
-         { name: "Next.js", icon: Globe },
+      { name: "Next.js", icon: Globe },
       { name: "TailwindCSS", icon: Wind },
       { name: "Node.js", icon: Code2 },
       { name: "Cloudinary", icon: Folder },
       { name: "MongoDB", icon: Database },
       { name: "Vercel", icon: Server },
-    
     ],
     image: "/IEEE.jpg?height=400&width=600",
     status: "Completed",
     color: "from-orange-500/20 to-red-500/20",
   },
-]
+];
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -69,7 +91,7 @@ const containerVariants: Variants = {
       delayChildren: 0.1,
     },
   },
-}
+};
 
 const cardVariants: Variants = {
   hidden: {
@@ -88,7 +110,7 @@ const cardVariants: Variants = {
       duration: 0.6,
     },
   },
-}
+};
 
 const headerVariants: Variants = {
   hidden: { opacity: 0, x: -50 },
@@ -101,10 +123,10 @@ const headerVariants: Variants = {
       damping: 15,
     },
   },
-}
+};
 
 export default function ProjectsShowcase() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen bg-black text-white p-6 overflow-hidden">
@@ -229,13 +251,15 @@ export default function ProjectsShowcase() {
                     <div className="mb-4">
                       <motion.h3
                         className="text-gray-400 text-sm font-medium mb-3"
-                        animate={hoveredCard === project.id ? { color: "#10b981" } : {}}
+                        animate={
+                          hoveredCard === project.id ? { color: "#10b981" } : {}
+                        }
                       >
                         Technologies Used
                       </motion.h3>
                       <div className="flex flex-wrap gap-2 min-h-[3rem]">
                         {project.technologies.map((tech, techIndex) => {
-                          const IconComponent = tech.icon
+                          const IconComponent = tech.icon;
                           return (
                             <motion.div
                               key={techIndex}
@@ -256,7 +280,11 @@ export default function ProjectsShowcase() {
                                 className="bg-gray-800 text-gray-300 hover:bg-green-600 hover:text-white flex items-center gap-1.5 px-2 py-1 transition-all duration-300 cursor-pointer"
                               >
                                 <motion.div
-                                  animate={hoveredCard === project.id ? { rotate: 360 } : {}}
+                                  animate={
+                                    hoveredCard === project.id
+                                      ? { rotate: 360 }
+                                      : {}
+                                  }
                                   transition={{ duration: 0.5 }}
                                 >
                                   <IconComponent className="w-3 h-3" />
@@ -264,7 +292,7 @@ export default function ProjectsShowcase() {
                                 {tech.name}
                               </Badge>
                             </motion.div>
-                          )
+                          );
                         })}
                       </div>
                     </div>
@@ -289,7 +317,11 @@ export default function ProjectsShowcase() {
                     {/* Animated overlay */}
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"
-                      animate={hoveredCard === project.id ? { opacity: 0.3 } : { opacity: 1 }}
+                      animate={
+                        hoveredCard === project.id
+                          ? { opacity: 0.3 }
+                          : { opacity: 1 }
+                      }
                       transition={{ duration: 0.3 }}
                     />
 
@@ -316,7 +348,7 @@ export default function ProjectsShowcase() {
                     </CardDescription>
                   </motion.div>
 
-                  {/* Animated View More Button */}
+                  {/* ✅ ONE Visit button per project */}
                   <motion.div
                     className="mt-auto pt-4"
                     initial={{ opacity: 0, y: 20 }}
@@ -325,9 +357,9 @@ export default function ProjectsShowcase() {
                   >
                     <Button
                       variant="outline"
+                      onClick={() => window.open(project.path, "_blank")}
                       className="w-fit bg-transparent border-gray-600 text-white hover:bg-green-600 hover:border-green-600 hover:shadow-lg hover:shadow-green-600/25 group/btn transition-all duration-300 relative overflow-hidden"
                     >
-                      {/* Button background animation */}
                       <motion.div
                         className="absolute inset-0 bg-green-600"
                         initial={{ x: "-100%" }}
@@ -335,15 +367,11 @@ export default function ProjectsShowcase() {
                         transition={{ duration: 0.3 }}
                       />
                       <span className="relative z-10 flex items-center">
-                        View more
+                        Visit
                         <motion.div
                           animate={
                             hoveredCard === project.id
-                              ? {
-                                  x: 4,
-                                  y: -4,
-                                  rotate: 45,
-                                }
+                              ? { x: 4, y: -4, rotate: 45 }
                               : { x: 0, y: 0, rotate: 0 }
                           }
                           transition={{ duration: 0.3 }}
@@ -360,5 +388,5 @@ export default function ProjectsShowcase() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
