@@ -12,6 +12,7 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
     "@react-three/fiber": "^9.1.2",
+    "@theamrendram/react-green-graph": "^0.0.3",
     "@types/three": "^0.177.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
