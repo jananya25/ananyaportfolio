@@ -62,7 +62,7 @@ on Instagram.   </p>
                   <div className="w-3 h-3 bg-[#00ff88] rounded-full mr-2 -ml-8"></div>
                   <h3 className="font-bold">Delhi University </h3>
                 </div>
-                <p className="text-white">Bachelor of Science - Computer Science</p>
+                <p className="text-white">Bachelors of Science - Computer Science</p>
                 <p className="text-gray-400 text-sm">Oct. 2020 – May 2023</p>
                 <p className="text-gray-400 text-sm mt-1"> 8.02 CGPA</p>
               </div>
