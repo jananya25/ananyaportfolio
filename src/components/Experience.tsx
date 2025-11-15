@@ -20,7 +20,7 @@ const Experience: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-bold">Technical Services Specialist</h3>
-                  <p className="text-[#00ff88] text-sm">Safe Navigation</p>
+                  <p className="text-[#00ff88] text-sm">Safe Marine Technologies</p>
                   <p className="text-gray-400 text-sm">Managed and resolved client service requests by analyzing and delivering digital navigation charts, Provided
 technical support and documentation to assist clients in ensuring seamless maritime operations</p>
                 </div>
